@@ -37,8 +37,8 @@ import java.math.BigDecimal;
 import javax.annotation.Nullable;
 
 @SuppressLint("ViewConstructor")
-public class FastVideoView {
+public class FastVideoView extends View {
   public FastVideoView(ThemedReactContext context) {
-
+    super(context);
   }
 }

@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.events.RCTEventEmitter;
 import javax.annotation.Nullable;
 import java.util.Map;
 
-public class FastVideViewManager extends SimpleViewManager<FastVideoView> {
+public class FastVideoViewManager extends SimpleViewManager<FastVideoView> {
     public static final String REACT_CLASS = "RCTFastVideo";
 
     @Override
