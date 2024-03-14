@@ -6,6 +6,8 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactMethod;
 
+import com.fastvideo.FastVideoSpec;
+
 public class FastVideoModule extends FastVideoSpec {
   public static final String NAME = "FastVideo";
 
@@ -13,7 +15,6 @@ public class FastVideoModule extends FastVideoSpec {
     super(context);
   }
 
-  @Override
   @NonNull
   public String getName() {
     return NAME;

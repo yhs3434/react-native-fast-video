@@ -3,6 +3,7 @@ package com.fastvideo;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.facebook.react.bridge.ModuleSpec;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.module.model.ReactModuleInfo;
@@ -11,9 +12,12 @@ import com.facebook.react.TurboReactPackage;
 import com.facebook.react.uimanager.ViewManager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.inject.Provider;
 
 public class FastVideoPackage extends TurboReactPackage {
   @Nullable
@@ -47,11 +51,9 @@ public class FastVideoPackage extends TurboReactPackage {
   }
 
   @Override
-  public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
+  public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
     List<ViewManager> viewManagers = new ArrayList<>();
-
-    viewManagers.add((ViewManager) new FastVideoViewManager());
-
+    viewManagers.add(new FastVideoViewManager());
     return viewManagers;
   }
 }

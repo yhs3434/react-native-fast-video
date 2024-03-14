@@ -27,3 +27,6 @@ const FastVideo = FastVideoModule
 export function multiply(a: number, b: number): Promise<number> {
   return FastVideo.multiply(a, b);
 }
+
+export { default as FastVideoView } from './FastVideoViewNativeComponent';
+export * from './FastVideoViewNativeComponent';

@@ -1,27 +1,33 @@
 package com.fastvideo;
 
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.common.MapBuilder;
-import com.facebook.react.uimanager.annotations.ReactProp;
-import com.facebook.react.uimanager.SimpleViewManager;
+import android.graphics.Color;
+
+import androidx.annotation.Nullable;
+
+import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.facebook.react.uimanager.events.RCTEventEmitter;
+import com.facebook.react.uimanager.annotations.ReactProp;
 
-import javax.annotation.Nullable;
-import java.util.Map;
+import com.fastvideo.FastVideoViewManagerSpec;
 
-public class FastVideoViewManager extends SimpleViewManager<FastVideoView> {
-    public static final String REACT_CLASS = "RCTFastVideo";
+@ReactModule(name = FastVideoViewManager.NAME)
+public class FastVideoViewManager extends FastVideoViewManagerSpec<FastVideoView> {
 
-    @Override
-    public String getName() {
-        return REACT_CLASS;
-    }
+  public static final String NAME = "FastVideoView";
 
-    @Override
-    public FastVideoView createViewInstance(ThemedReactContext themedReactContext) {
-        return new FastVideoView(themedReactContext);
-    }
+  @Override
+  public String getName() {
+    return NAME;
+  }
+
+  @Override
+  public FastVideoView createViewInstance(ThemedReactContext context) {
+    return new FastVideoView(context);
+  }
+
+  @Override
+  @ReactProp(name = "color")
+  public void setColor(FastVideoView view, @Nullable String color) {
+    view.setBackgroundColor(Color.parseColor(color));
+  }
 }
