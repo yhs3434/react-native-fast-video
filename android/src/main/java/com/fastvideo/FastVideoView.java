@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.Window;
 import android.webkit.CookieManager;
 import android.widget.MediaController;
+import android.widget.TextView;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -40,5 +41,8 @@ import javax.annotation.Nullable;
 public class FastVideoView extends View {
   public FastVideoView(ThemedReactContext context) {
     super(context);
+
+    TextView text = new TextView(context);
+    text.setText("Welcome to Android Fragments with React Native.");
   }
 }
