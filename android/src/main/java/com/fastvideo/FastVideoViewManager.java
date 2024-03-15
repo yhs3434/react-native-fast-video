@@ -1,6 +1,7 @@
 package com.fastvideo;
 
 import android.graphics.Color;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public class FastVideoViewManager extends FastVideoViewManagerSpec<FastVideoView
   }
 
   @Override
-  @ReactProp(name = "color")
-  public void setColor(FastVideoView view, @Nullable String color) {
-    view.setBackgroundColor(Color.parseColor(color));
+  @ReactProp(name = "src")
+  public void setSrc(FastVideoView view, @Nullable String src) {
+    view.setSrc(src);
   }
 }

@@ -13,7 +13,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
-      <FastVideoView />
+      <FastVideoView
+        src={
+          'https://file-dev.beaverworksinc.com/images/contents/2024/03/4670643562134223.mp4'
+        }
+      />
     </View>
   );
 }
